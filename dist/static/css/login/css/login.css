@@ -1,0 +1,91 @@
+header{
+    width: 100%;
+    border-bottom: 1px solid #e4e4e4;
+}
+header .inner{
+    line-height: 60px;
+    overflow:hidden;
+}
+.login-logo{
+    width: 340px;
+    height:60px;
+    float: left;
+    background: url("../images/loging_03.jpg") 50% no-repeat;
+}
+.nav{
+    float: right;
+    width:47%;
+}
+.nav ul li a{
+    color: #464646;
+    margin: 0 25px;
+    font-weight: 600;
+}
+.nav ul li{
+    float: right;
+}
+.main .inner .mainRight input{
+    background: #f2f2f2;
+    border: none;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    height: 44px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    padding: 0px 10px;
+    font-size: 14px;
+}
+.main .inner .mainRight .login-Title{
+    line-height: 104px;
+    text-align: center;
+    font-weight: 600;
+}
+.main .inner .mainRight{
+    width: 360px;
+    height: 320px;
+    float: left;
+    background: #f9f9f9;
+    margin-top: 38px;
+    border-radius:5px;
+}
+.main .inner .mainLeft{
+    width: 790px;
+    float: left;
+    height: 100%;
+    background: url("../images/loginLeft_03.jpg")no-repeat;
+    background-size: contain;
+    background-position:50% 50%;
+}
+.main{
+    height:100%;
+}
+.main .inner{
+    height:420px;
+}
+.login-btn{
+    display: block;
+    background: #00b0ec;
+    width:300px;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-top:20px;
+    text-align: center;
+    line-height: 44px;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+footer .inner{
+    color: #888888;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 20px;
+}

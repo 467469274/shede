@@ -1,0 +1,22 @@
+h1{
+	font-size: 20px;
+	color:#20A0FF;
+}
+p{
+	font-size: 14px;
+	color:#666;
+	margin-left: 10px;
+	margin-top:18px; 
+}
+.fp{
+	 margin-top:20px;
+}
+.fp>p{
+	font-size: 16px;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}

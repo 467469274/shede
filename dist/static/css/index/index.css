@@ -1,0 +1,102 @@
+.stageWarp .header {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  padding-left: 241px;
+  line-height: 50px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.stageWarp .header .user {
+  height: 50px;
+  float:right;
+}
+
+.stageWarp .header .user a {
+  display: inline-block;
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.stageWarp .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: #1d2a37;
+  overflow: auto;
+}
+
+.el-menu-vertical-demo li{
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+.el-menu-vertical-demo {
+  background-color: #1d2a37 !important;
+  color: #a7c8e1 !important;
+}
+
+.el-submenu__title a {
+  color: #a7c8e1 !important;
+}
+.is-active a{
+  color: #a7c8e1;
+}
+.el-menu-item{
+  color: #a7c8e1 !important;
+  background-color: #1d2a37 !important;
+}
+.se a{
+  color: #a7c8e1;
+}
+.el-submenu__title{
+
+}
+.se{
+  color: #a7c8e1 !important;
+  background-color: #1d2a37 !important;
+}
+.el-submenu__title {
+  color: #a7c8e1;
+  background-color: #1d2a37 !important;
+}
+
+.stageWarp .sidebar .logo {
+  margin-top: 10px;
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.stageWarp .main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-left: 200px;
+  z-index: -1;
+}
+
+.stageWarp .main .view {
+  width: 100%;
+  height: 100%;
+  background: #fcfcfc;
+  padding: 80px;
+  padding-bottom: 180px !important;
+  padding-top: 40px !important;
+  overflow-x: scroll;
+}
+
+.footer {
+  width: 100%;
+  line-height: 60px;
+  background: #f8fafc;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  padding-left: 230px;
+  border-top: 2px solid #dfe6ec;
+}
+
+

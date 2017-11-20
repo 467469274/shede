@@ -1,0 +1,44 @@
+.font{
+	font-size: 14px;
+	
+}
+span.font{
+	  width:100px;
+	  display: inline-block;
+}
+/*.bu{
+	display: inline-block;
+	margin-left: 30px;
+}*/
+div.sort{
+	margin-top:10px;
+}
+.el-checkbox-group{
+	display: inline-block;
+}
+
+div.page{
+
+	font-size: 12px;
+	margin-top: 100px;
+}
+div.page a{
+	display: inline-block;
+	margin-left: 12px;
+}
+div.page select{
+	margin-left: 10px;
+}
+div.line{
+	width:100%;
+	height: 2px;
+	margin-top:10px;
+	background-color: #333;
+
+}
+div.suport{
+	font-size: 12px;
+	
+	margin-top: 5px;
+	color: #333;
+}

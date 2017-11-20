@@ -1,0 +1,186 @@
+.heightAuto {
+  height: auto!important;
+}
+.main-content .brithdayWarp .brithdayInner {
+  font-size: 14px;
+  line-height: 36px;
+}
+.main-content .brithdayWarp .brithdayInner .day-moon {
+  font-weight: 700;
+  margin-right: 20px;
+}
+.main-content .brithdayWarp .brithdayInner .day-active {
+  width: 40px;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid #98b0b9;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+.main-content .brithdayWarp .brithdayInner .active {
+  background: #98b0b9;
+  color: #ffffff;
+}
+.main-content .input-Warp {
+  width: 550px;
+  height: 40px;
+  border: 2px solid #1c2b36;
+}
+.main-content .input-Warp select {
+  width: 100px;
+  height: 36px;
+  border: none;
+  background: #e3e9ed;
+  outline: none;
+  padding: 0 2%;
+}
+.main-content .input-Warp select option {
+  text-align: center;
+}
+.main-content .input-Warp input {
+  width: 340px;
+  background: #ffffff;
+  height: 34px;
+  border: none;
+}
+.main-content .input-Warp a {
+  text-align: center;
+  width: 93px;
+  display: inline-block;
+  line-height: 36px;
+  background: #1c2b36;
+  color: #ffffff;
+  float: right;
+}
+.main-content .classWarp {
+  margin-top: 30px;
+}
+.main-content .classWarp .tabs {
+  border-bottom: 2px solid #1c2b36;
+}
+.main-content .classWarp .tabs span {
+  display: inline-block;
+  width: 100px;
+  line-height: 44px;
+  color: #333333;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.main-content .classWarp .tabs .active {
+  background: #1c2b36;
+  color: #ffffff;
+}
+.main-content .classWarp .listWarp {
+  position: relative;
+}
+.main-content .classWarp .listWarp .list {
+  height: 290px;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #e3e9ed;
+  padding-bottom: 30px;
+}
+.main-content .classWarp .listWarp .list li {
+  overflow: hidden;
+}
+.main-content .classWarp .listWarp .list li .min-one {
+  width: 750px;
+  overflow: hidden;
+  float: left;
+  height: 37px;
+}
+.main-content .classWarp .listWarp .list li .min-one span {
+  font-weight: normal;
+  padding: 0 10px;
+  width: auto !important;
+  color: #333333;
+}
+.main-content .classWarp .listWarp .list li .min-one .shiActive-hook {
+  color: #90d9f2;
+}
+.main-content .classWarp .listWarp .list li select {
+  background: #ffffff ;
+  color: #a8a8a8 ;
+  font-weight: inherit ;
+  border: 1px solid ;
+  height: 38px;
+}
+.main-content .classWarp .listWarp .list li .sheng {
+  width: 860px;
+  height: auto;
+  background: #f5f9fa;
+  border: 1px solid #e4e9ed;
+  overflow: hidden;
+  float: left;
+  margin-left: 100px;
+}
+.main-content .classWarp .listWarp .list li .sheng span:first-child {
+  width: auto!important;
+  padding: 0 10px;
+}
+.main-content .classWarp .listWarp .list li .shiqu {
+  overflow: hidden;
+}
+.main-content .classWarp .listWarp .list li span {
+  font-size: 14px;
+  line-height: 37px;
+  padding: 0 10px;
+  float: left;
+  text-align: right;
+  cursor: pointer;
+}
+.main-content .classWarp .listWarp .list li span:first-child {
+  padding: 0;
+  width: 90px;
+}
+.main-content .classWarp .listWarp .list li .active {
+  color: #00b1ef!important;
+  font-weight: 700!important;
+}
+.main-content .classWarp .listWarp .moreBtn {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #e3e9ed;
+  width: 80px;
+  height: 20px;
+  border-radius: 1px 1px 55px 55px;
+  display: block;
+  background-image: url("../images/sanjiao111_03.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.main-content .search-end {
+  margin-top: 120px;
+}
+.blueBtn {
+  width: 120px;
+  line-height: 46px;
+  color: #ffffff;
+  background: #00b1ef;
+  text-align: center;
+}
+.writeBtn {
+  border: 1px solid #00b1ef;
+  background: #ffffff;
+  width: 154px;
+  line-height: 44px;
+  text-align: center;
+  color: #00b1ef;
+}
+.margin-top50 {
+  margin-top: 50px;
+}
+.margin-left346 {
+  margin-left: 346px;
+}
+.margin-left20 {
+  margin-left: 20px;
+}

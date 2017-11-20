@@ -1,0 +1,16 @@
+h1{
+	font-size: 20px;
+	color:#20A0FF;
+}
+p{
+	font-size: 14px;
+}
+.fp{
+	 margin-top:20px;
+}
+.fp>p{
+	font-size: 16px;
+}
+.red{
+	color: #FF4949;
+}

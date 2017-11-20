@@ -1,0 +1,75 @@
+.searchWarp {
+  height: 320px;
+  width: 100%;
+}
+.searchWarp .searchBorder {
+  padding: 120px 0 0 240px;
+}
+.searchWarp .searchBorder .btnWarp span {
+  cursor: pointer;
+  width: 80px;
+  line-height: 38px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+.searchWarp .searchBorder .btnWarp .active {
+  background: #1c2b36;
+  color: #ffffff;
+}
+.searchWarp .searchBorder .inputWarp input {
+  border: 2px solid #1c2b36;
+  width: 450px;
+  display: inline-block;
+}
+.searchWarp .searchBorder .inputWarp span {
+  width: 98px;
+  line-height: 38px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  background: #1c2b36;
+  color: #ffffff;
+  vertical-align: top;
+}
+.searchWarp .searchBorder .aWarp {
+  margin-top: 30px;
+  display: inline-block;
+  margin-left: 200px;
+}
+.searchWarp .searchBorder .aWarp a {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  color: #02b2ef;
+}
+.listMain {
+  border: 1px solid #e3e9ed;
+  line-height: 46px;
+}
+.listMain caption {
+  background: #e3e9ed;
+  text-align: center;
+  font-weight: 700;
+}
+.listMain tbody tr {
+  width: 100%;
+  border-bottom: 2px #e3e9ed dashed;
+}
+.listMain tbody tr :first-child {
+  background: #edf2f5;
+  width: 130px;
+  text-align: center;
+  font-size: 14px;
+  color: #1c2b36;
+}
+.listMain tbody tr td {
+  font-size: 14px;
+  padding: 0 20px!important;
+}
+.listMain tbody tr td span {
+  color: #00b1ef!important;
+  font-weight: 700;
+  background: #ffffff!important;
+}

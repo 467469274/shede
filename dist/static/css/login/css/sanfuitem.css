@@ -1,0 +1,126 @@
+.searchjieguo {
+  font-size: 14px;
+  line-height: 44px;
+}
+.searchjieguo span {
+  color: #00b1ef;
+}
+.resultWarp {
+  border: 1px solid #e3e9ed;
+  width: 100%;
+}
+.resultWarp .resultTitle {
+  background: #e3e9ed;
+  padding: 10px;
+  font-size: 14px;
+}
+.resultWarp .resultTitle .btnWarp {
+  float: right;
+  color: #00b1ef;
+}
+.resultWarp .resultTitle .btnWarp span {
+  cursor: pointer;
+}
+.resultWarp .list .item {
+  padding: 11px 0 24px;
+  border-bottom: 2px dashed #e3e9ed;
+  overflow: hidden;
+}
+.resultWarp .list .item:last-child {
+  border-bottom: none;
+}
+.resultWarp .list .item .item-left {
+  float: left;
+  overflow: hidden;
+  width: 79%;
+}
+.resultWarp .list .item .item-left .inputWarp {
+  width: 5%;
+  height: 100%;
+  padding-top: 20px;
+  float: left;
+}
+.resultWarp .list .item .item-left .inputWarp .son_check {
+  margin-left: 9px;
+}
+.resultWarp .list .item .item-left .testWarp {
+  width: 90%;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+}
+.resultWarp .list .item .item-left .testWarp .nameWarp {
+  line-height: 57px;
+}
+.resultWarp .list .item .item-left .testWarp .nameWarp .name {
+  color: #1c2b36;
+  font-size: 20px;
+}
+.resultWarp .list .item .item-left .testWarp .nameWarp .locationIcon {
+  color: #00b1ef;
+  padding-left: 20px;
+  background: url("../images/location.png") no-repeat;
+  background-position: 5px 50%;
+  font-size: 14px;
+}
+.resultWarp .list .item .item-left .testWarp .nameWarp .menber {
+  font-size: 12px;
+}
+.resultWarp .list .item .item-left .testWarp .commonWarp,
+.resultWarp .list .item .item-left .testWarp .introWarp {
+  line-height: 33px;
+  font-size: 14px;
+  color: #666666;
+}
+.resultWarp .list .item .item-left .testWarp .commonWarp span,
+.resultWarp .list .item .item-left .testWarp .introWarp span {
+  border-right: 1px solid #acacac;
+  padding: 0 10px;
+}
+.resultWarp .list .item .item-left .testWarp .commonWarp span:last-child,
+.resultWarp .list .item .item-left .testWarp .introWarp span:last-child {
+  border: none;
+}
+.resultWarp .list .item .item-left .testWarp .commonWarp span:first-child,
+.resultWarp .list .item .item-left .testWarp .introWarp span:first-child {
+  padding-left: 0!important;
+}
+.resultWarp .list .item .item-left .testWarp .introWarp {
+  line-height: 23px;
+}
+.resultWarp .list .item .item-left .greyWarp {
+  margin-top: 18px;
+}
+.resultWarp .list .item .item-left .greyWarp .greyBtn {
+  width: 62px;
+  line-height: 23px;
+  font-size: 12px;
+  color: #98b0b9;
+  border: 1px solid #98b0b9;
+  display: inline-block;
+  text-align: center;
+  margin-right: 16px;
+}
+.resultWarp .list .item .item-right {
+  width: 21%;
+  float: right;
+  border-left: 2px dashed #e3e9ed;
+  font-size: 14px;
+  color: #1c2b36;
+  text-align: center;
+  min-height: 130px;
+}
+.resultWarp .list .item .item-right .menber {
+  line-height: 49px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.resultWarp .list .item .item-right .menberNum {
+  line-height: 20px;
+}
+.resultWarp .list .item .item-right .residueDay {
+  line-height: 47px;
+}
+.resultWarp .list .item .item-right .residueDay span {
+  color: #eb2b2b;
+}

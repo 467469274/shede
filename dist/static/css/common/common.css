@@ -1,0 +1,32 @@
+.blackBtn {
+  background: #00b0ec;
+  color: #ffffff;
+  padding: 8.5px 21px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.shortInput {
+  width: 90px!important;
+  margin-right: 20px;
+}
+.margin-right20 {
+  margin-right: 20px;
+}
+.width70 {
+  width: 70px!important;
+}
+.weightTitle {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 60px;
+}
+.color00b0ec {
+  color: #00b0ec;
+}
+.el-dialog--tiny {
+  z-index: 99999999;
+}

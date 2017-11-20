@@ -1,0 +1,14 @@
+.commdetailWarp {
+  padding: 40px!important;
+}
+.commdetailWarp .detailOp {
+  margin: 0 15px;
+}
+.commdetailWarp .el-input-key {
+  width: 241px;
+  margin-right: 15px;
+}
+.commdetailWarp .commTable {
+  width: 80%;
+  margin-top: 51px;
+}

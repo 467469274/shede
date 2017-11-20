@@ -1,0 +1,61 @@
+.commAddWarp .commHeader .title {
+  font-size: 20px;
+}
+.commAddWarp .commHeader .crumbs {
+  font-size: 16px;
+  margin-top: 30px;
+}
+.commAddWarp .commHeader .crumbs a {
+  padding: 10px;
+}
+.commAddWarp .commHeader .crumbs a:first-child {
+  padding: 0;
+}
+.commAddWarp .addMain .commSection {
+  margin-top: 40px;
+}
+.commAddWarp .addMain .commSection .el-input__inner {
+  height: 28px;
+}
+.commAddWarp .addMain .commSection .title {
+  font-size: 14px;
+  margin-right: 20px;
+  width: 80px;
+  display: inline-block;
+}
+.commAddWarp .addMain .commSection .inputBox {
+  width: 300px;
+}
+.commAddWarp .addMain .commSection .commTextarea {
+  vertical-align: top;
+  width: 300px;
+  resize: none;
+}
+.commAddWarp .addMain .commSection .guigeCheckBox {
+  margin-bottom: 20px;
+}
+.commAddWarp .addMain .commSection .guigeCheckBox .el-checkbox {
+  width: 70px;
+}
+.commAddWarp .addMain .commSection .guigeCheckBox .title {
+  width: 40px;
+}
+.commAddWarp .addMain .commSection .classWarp {
+  width: 60%;
+  min-width: 800px;
+}
+.commAddWarp .addMain .commSection .classWarp .classInner {
+  width: 30%;
+  margin: 15px 0;
+  display: inline-block;
+}
+.commAddWarp .addMain .upLoad {
+  margin: 50px 0;
+}
+.commAddWarp .btnWarp {
+  margin: 60px 0;
+  margin-bottom: 150px;
+}
+.commAddWarp .btnWarp .blackBtn {
+  margin-right: 20px;
+}

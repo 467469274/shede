@@ -1,0 +1,18 @@
+h2{
+	font-size: 24px;
+	color:#aa0000;
+}
+h1{
+	font-size: 16px;
+	color:#20A0FF;
+}
+p{
+	font-size: 14px;
+}
+.el-input {
+    width: 300px;
+  }
+.sou{
+	float: right;
+	margin-right: 35%;
+}

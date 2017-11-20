@@ -1,0 +1,85 @@
+#he{
+	margin-left: 10px;
+	font-size: 12px;
+	margin-top:20px;
+}
+#he input{
+    display: inline-block;
+   background-color: #000;
+   border-radius: 5px;
+   width:80px;
+   height: 30px;
+   color: #fff;
+}
+.bu{
+	display: inline-block;
+	margin-left: 500px;
+}
+.che{
+	margin-left: 200px;
+}
+.el-table{
+	margin-top: 30px;
+}
+.cell{
+	text-align:center;
+}
+div.page{
+	margin-left: 10px;
+	font-size: 12px;
+	margin-top: 100px;
+}
+div.page a{
+	display: inline-block;
+	margin-left: 12px;
+}
+div.page select{
+	margin-left: 10px;
+}
+div.line{
+	width:100%;
+	height: 2px;
+	margin-top:10px;
+	background-color: #333;
+	margin-left: 10px;
+}
+div.suport{
+	font-size: 12px;
+	margin-left: 10px;
+	margin-top: 5px;
+	color: #333;
+}
+	.demo-table-expand {
+    font-size: 0;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .diva{
+  	clear: both;
+  	width:900px;background-color:#eef1f6;margin-top:28px;height:32px;line-height:32px;font-size:14px;font-weight:bold;color:#1f2d3d;
+  }
+ .p1{
+width:180px;text-align:center;margin:0;float:left;
+ }
+ .p2{
+width:160px;text-align:center;margin:0;float:left
+ }
+ .p3{
+width:80px;text-align:center;margin:0;float:left
+ }
+ .p4{
+ width:220px;text-align:center;margin:0;float:left
+ }
+ #aaa th{
+  display: none;
+}
+.el-table__expanded-cell{
+  padding:0!important;
+}
