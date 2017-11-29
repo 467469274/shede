@@ -38,9 +38,15 @@
     },
     created(){
       if (this.$route.params.id!='no'){
-        let _this = this;
-        this.axios.get('http://shede.sinmore.vip/api/admin/labels/edit?label_id='+this.$route.params.id+'&token=000')
+        let _this = this;        let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+
+        this.axios.get('http://shede.sinmore.vip/api/admin/labels/edit?label_id='+this.$route.params.id+'&token='+token)
           .then(function (response) {
+
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg);
+              return;
+            }
             _this.name = response.data.data.name;
             _this.sort = response.data.data.sort;
           })

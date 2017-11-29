@@ -84,6 +84,9 @@
       let _this = this;
       this.axios.get('http://shede.sinmore.vip/api/citylist')
         .then(function (response) {
+          if(response.data.error_code == 8){
+            alert(response.data.error_msg)
+          }
           let data = response.data.data;
           for (let i = 0; i < data.length; i++) {
             delete data[i].get_city
@@ -93,9 +96,14 @@
         .catch(function (response) {
           console.log(response);
         });
-      this.axios.get('http://shede.sinmore.vip/api/admin/logistics/index?website_id=' + this.$route.params.id + '&token=000')
+      let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+      this.axios.get('http://shede.sinmore.vip/api/admin/logistics/index?website_id=' + this.$route.params.id + '&token='+token)
         .then(function (response) {
           console.log(response)
+
+          if(response.data.error_code == 8){
+            alert(response.data.error_msg)
+          }
           _this.wdInfo = response.data.data.website;
           _this.tableData = response.data.data.logistics;
         })
@@ -161,8 +169,14 @@
       clickDq(n){
 //          /api/admin/logistics/index
         let _this = this;
-        this.axios.get('http://shede.sinmore.vip/api/admin/logistics/index?website_id=' + this.$route.params.id + '&token=000&province_id=' + n[0] + '')
+        let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+        this.axios.get('http://shede.sinmore.vip/api/admin/logistics/index?website_id=' + this.$route.params.id + '&token='+token+'&province_id=' + n[0] + '')
           .then(function (response) {
+
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg);
+              return;
+            }
             _this.tableData = response.data.data.logistics;
           })
           .catch(function (response) {

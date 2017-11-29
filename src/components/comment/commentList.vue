@@ -1,23 +1,18 @@
 <template>
   <div>
-    <router-link  to="/addBanner/add" target="_blank" v-if="this.$route.params.type!='peo'"> <el-button type="primary">添加图片</el-button></router-link>
+    <el-button type="primary" @click="ht" v-if="this.$route.params.type=='peo'">后台评论</el-button>
+    <router-link  to="/commentDetail/add/server" target="_blank" style="width: 20%" v-if="this.$route.params.type!='peo'"> <el-button type="primary">添加评论</el-button></router-link>
 
-    <el-form label-position="left" class="demo-ruleForm">
-      <el-form-item
-        label=" "
-        style="width:80%"
-      >
-
-              <el-date-picker
-                v-model="dates"
-                type="daterange"
-                align="right"
-                placeholder="选择日期范围"
-                :picker-options="pickerOptions2" style="display: inline-block">
-              </el-date-picker>
-        <el-input v-model="search"style="display: inline-block;width: 300px"></el-input>
-        <el-button type="primary" @click="searchs">搜索</el-button>
-      </el-form-item>
+    <el-form label-position="left" class="demo-ruleForm" style="width: 50%;display: inline-block">
+      <el-date-picker
+        v-model="dates"
+        type="daterange"
+        align="right"
+        placeholder="选择日期范围"
+        :picker-options="pickerOptions2" style="display: inline-block">
+      </el-date-picker>
+      <el-input v-model="search"style="display: inline-block;width: 300px"></el-input>
+      <el-button type="primary" @click="searchs">搜索</el-button>
     </el-form>
     <el-table
       :data="tableData"
@@ -66,16 +61,6 @@
       </el-table-column>
 
     </el-table>
-    <div class="block" style="margin-top: 45px;">
-      <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page.sync="currentPage3"
-        :page-size="pageSize"
-        layout="prev, pager, next, jumper"
-        :total="total" style="display: inline-block">
-      </el-pagination><span style="display: inline-block;font-size:14px;line-height: 25px;vertical-align: sub;">共{{total}}条</span>
-    </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -99,6 +84,7 @@
         currentPage2: 5,
         currentPage3: 1,
         currentPage4: 4,
+        type:this.$route.params.type,
         p:1,
         pageSize:50,
         search:'',
@@ -142,11 +128,11 @@
         console.log(data)
       },
       bianji(s){
-        window.open('/#/commentDetail/' + s.row.comment_id + '')
+        window.open('/#/commentDetail/' + s.row.comment_id + '/'+this.$route.params.type)
       },
       del(s){
         let _this = this;
-        this.$confirm('此操作将永久删除该评论, 是否继续?', '提示', {
+        this.$confirm('此操作将永久删除该商品, 是否继续?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
@@ -192,19 +178,31 @@
             searchData = '&keyword='+_this.$route.params.id;
           }
         }
-        _this.axios.get('http://shede.sinmore.vip/api/admin/comments/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token=000&data_source='+type+searchData+'')
+        _this.axios.get('http://shede.sinmore.vip/api/admin/comments/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token='+JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token+'&data_source='+type+searchData+'')
           .then(function (response) {
+            console.log(response)
+
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg);
+              return;
+            }
             _this.tableData = response.data.data;
-            _this.total = response.data.total;
+            _this.total = response.data.data.total;
           })
           .catch(function (response) {
             console.log(response);
           });
+      },
+      ht(){
+        window.open('/#/commentList/server/0')
       }
     },
     watch:{
       dates(n){
         window.open('/#/commentList/peo/' + (+new Date(n[0])) + ','+(+new Date(n[1])));
+      },
+      type(){
+        this.getData()
       }
     }
   }

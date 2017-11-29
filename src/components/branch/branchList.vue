@@ -85,7 +85,7 @@
     },
     data() {
       return {
-        searchVal:this.$route.params.id,
+        searchVal:(this.$route.params.id!='add')?this.$route.params.id:"",
         tableData: [],
         total:0,
         currentPage1: 5,
@@ -152,12 +152,17 @@
       },
       getData(){
         let _this = this;
-        var url = 'http://shede.sinmore.vip/api/admin/website/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token=000';
+        let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+
+        var url = 'http://shede.sinmore.vip/api/admin/website/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token='+token;
         if (_this.searchVal!='add'){
-          url = 'http://shede.sinmore.vip/api/admin/website/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token=000&name='+_this.searchVal+'';
+          url = 'http://shede.sinmore.vip/api/admin/website/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token='+token+'&name='+_this.searchVal+'';
         }
         this.axios.get(url)
           .then(function (response) {
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg)
+            }
             _this.tableData = response.data.data.websites;
             _this.total = response.data.data.total;
           })

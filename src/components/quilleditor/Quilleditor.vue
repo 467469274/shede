@@ -286,13 +286,14 @@
         let item = list.shift();
         var data = new FormData;
         data.append(this.fileName, item);
-        data.append('model', 3);
+        data.append('model', 'goods');
         this.editor.focus();
         var xhr = new XMLHttpRequest();
         xhr.open('post', this.uploadUrl);
         xhr.responseType = 'json';
         xhr.send(data);
         xhr.onload = function () {
+          console.log(xhr.status)
           if (xhr.status == 200) {
             self.editor.insertEmbed(self.editor.getSelection().index, 'image', xhr.response.data.url);
             self.upImg(list, self)

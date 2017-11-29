@@ -65,7 +65,7 @@
       </el-form-item>
       <el-form-item>
         <el-button type="primary"  @click="submitForm()">保存</el-button>
-        <el-button type="danger" @click="resetForm()" v-if="this.$route.params.id!='add'">删除</el-button>
+        <el-button type="danger" @click="resetForm()" v-if="this.$route.params.id!='no'">删除</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -92,8 +92,12 @@
     }},
     created(){
       let _this = this;
+      let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
       this.axios.get('http://shede.sinmore.vip/api/citylist')
         .then(function (response) {
+          if(response.data.error_code == 8){
+            alert(response.data.error_msg)
+          }
           _this.dq = response.data.data;
         })
         .catch(function (response) {
@@ -101,10 +105,12 @@
         });
       if (this.$route.params.id!='add'){
         let _this = this;
-        this.axios.get('http://shede.sinmore.vip/api/admin/website/edit?website_id='+this.$route.params.id+'&token=000')
+        this.axios.get('http://shede.sinmore.vip/api/admin/website/edit?website_id='+this.$route.params.id+'&token='+token)
           .then(function (response) {
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg)
+            }
             let data = response.data.data;
-            console.log(data);
             _this.contacts = data.contacts;
             _this.clickDq[0] = data.province_id;
             _this.clickDq[1] = data.city_id;
@@ -113,14 +119,16 @@
             _this.short_name = data.short_name;
             _this.telephone = data.telephone;
             _this.address = data.address;
-
           })
           .catch(function (response) {
             console.log(response);
           });
-        this.axios.get('http://shede.sinmore.vip/api/admin/website/goodsStock?website_id='+this.$route.params.id+'&token=000')
+
+        this.axios.get('http://shede.sinmore.vip/api/admin/website/goodsStock?website_id='+this.$route.params.id+'&token='+token)
           .then(function (response) {
-            console.log(response);
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg)
+            }
             _this.tableData = response.data.data.goods;
           })
           .catch(function (response) {

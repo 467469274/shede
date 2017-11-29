@@ -130,9 +130,15 @@
          _this.total = data.data.total
          },function(){
          })*/
-        this.axios.get('http://shede.sinmore.vip/api/admin/labels/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token=000')
+        this.axios.get('http://shede.sinmore.vip/api/admin/labels/index?page='+_this.p+'&pagesize='+_this.pageSize+'&token='+JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token+'')
           .then(function (response) {
-            console.log(response)
+            console.log(response);
+
+
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg);
+              return;
+            }
             _this.tableData = response.data.data.list;
             _this.total = response.data.data.total
           })

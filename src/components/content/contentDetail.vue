@@ -34,7 +34,13 @@
         label="预览次数"
         style="width:30%"
       >
-        {{is_browse}}
+        {{browse}}
+      </el-form-item>
+      <el-form-item
+        label="随机预览数"
+        style="width:30%"
+      >
+        <el-input v-model="is_browse"></el-input>
       </el-form-item>
       <el-form-item
         label="发布时间"
@@ -56,7 +62,7 @@
           class="avatar-uploader"
           action="http://shede.sinmore.vip/api/storeImage"
           name="image"
-          :data="{model:9}"
+          :data="{model:'content'}"
           :show-file-list="false"
           :on-success="handleAvatarSuccess">
           <img v-if="imageUrl" :src="showImg"
@@ -76,10 +82,11 @@
         style="width:30%"
       >
         <editor ref="myTextEditor"
-                :fileName="'pic'"
+                :fileName="'image'"
                 :canCrop="canCrop"
                 :uploadUrl="uploadUrl"
-                v-model="moren"></editor>
+                v-model="moren">
+        </editor>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="submitForm()">保存
@@ -98,7 +105,7 @@
     data(){
       return {
         /*测试上传图片的接口，返回结构为{url:''}*/
-        uploadUrl: 'http://chenchengonghao.com/api/ossStoreImg',
+        uploadUrl: 'http://shede.sinmore.vip/api/storeImage',
         canCrop: false,
         imageUrl: '',
         location: '',
@@ -106,22 +113,24 @@
         title: '',
         options: [{
           value: '1',
-          label: '黄金糕'
+          label: '首页'
         }, {
           value: '2',
-          label: '双皮奶'
+          label: '其他'
         }],
         updated_at: '',
         sort: '',
         link: '',
-        is_browse: '0',
+        is_browse:parseInt(Math.random()*1000),
+        browse: '0',
         id: '',
         created_at: '',
-        publisher: ''
+        publisher: '',
+        showImg:''
       }
     },
     created(){
-      if (this.$route.params.id != 'add') {
+      if (this.$route.params.id != 'no') {
         let _this = this;
         _this.postFetch('/api/admin/content/editContent', {
           con_id: _this.$route.params.id
@@ -133,6 +142,7 @@
           _this.imageUrl = data.data.pic_url;
           _this.link = data.data.link;
           _this.is_browse = data.data.is_browse;
+          _this.browse = data.data.browse;
           _this.id = data.data.id;
           _this.created_at = data.data.created_at;
           _this.moren = data.data.content;
@@ -141,9 +151,10 @@
         })
       }
     },
-    computed: {
-      showImg(){
-        return 'http://sinmore-gonghao.oss-cn-beijing.aliyuncs.com/bootpage/' + this.imageUrl
+    watch: {
+      imageUrl(){
+//        showImg
+        this.showImg =  'http://shede.sinmore.vip/storage/content/' + this.imageUrl
       }
     },
     methods: {
@@ -155,16 +166,26 @@
             link:_this.link,
             sort:_this.sort,
             browse:_this.is_browse,
+            is_browse:_this.is_browse,
             pic:_this.imageUrl,
-            content:_this.moren
+            content:_this.moren,
+            text_location:_this.location
           },
           url = '/api/admin/content/addContent';
-        if (this.$route.params.id != 'add'){
+        if (this.$route.params.id != 'no'){
           url ='/api/admin/content/upContent';
           obj.con_id = this.$route.params.id;
         }
         _this.postFetch(url,obj, function (data) {
-          console.log(data);
+
+          if (data.error_code === 0) {
+            _this.$router.push({path: '/contentList'});
+          }else {
+            _this.$notify.error({
+              title: '错误',
+              message: data.error_msg
+            });
+          }
         })
       },
       resetForm(){
@@ -196,7 +217,9 @@
         }).catch(() => {
         });
       },
-      handleAvatarSuccess(){
+      handleAvatarSuccess(se){
+        console.log(se)
+        this.imageUrl = se.data.filename;
       }
     },
     components: {

@@ -93,7 +93,7 @@
         <template scope="scope">
           <el-button type="text" size="small" @click="del(scope)">删除</el-button>
           <el-button type="text" size="small" @click="bianji(scope)">编辑</el-button>
-          <el-button type="text" size="small" @click="showqq(scope)">显示商品库存</el-button>
+          <el-button type="text" size="small" @click="showqq(scope)">查看商品排期</el-button>
           <el-button type="text" size="small" @click="oper(scope,0)" v-if="scope.row.status ==1">下架</el-button>
           <el-button type="text" size="small" @click="oper(scope,1)" v-if="scope.row.status ==0">上架</el-button>
         </template>
@@ -152,7 +152,7 @@
     },
     methods: {
       bianji(s) {
-        window.open('/#/addBanner/' + s.row.id + '')
+        window.open('/#/commodityDetail/' + s.row.id + '')
       },
       del(s) {
         let _this = this;
@@ -194,8 +194,14 @@
       },
       getData() {
         let _this = this;
-        this.axios.get('http://shede.sinmore.vip/api/admin/labels/index?page=1&pagesize=1000&token=000')
+        let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+        this.axios.get('http://shede.sinmore.vip/api/admin/labels/index?page=1&pagesize=1000&token='+token)
           .then(function (labaldata) {
+
+            if(labaldata.data.error_code == 8){
+              alert(labaldata.data.error_msg);
+              return;
+            }
             _this.labals = labaldata.data.data.list;
           })
           .catch(function () {
@@ -209,10 +215,14 @@
         } else if (this.$route.params.type == 'name') {
           isType = '&name=' + this.$route.params.id;
         }
-        let url = 'http://shede.sinmore.vip/api/admin/goods/index?page=' + _this.p + '&pagesize=' + _this.pageSize + '&token=000' + isType
+        let url = 'http://shede.sinmore.vip/api/admin/goods/index?page=' + _this.p + '&pagesize=' + _this.pageSize + '&token='+JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token+'' + isType
         _this.axios.get(url)
           .then(function (response) {
-            console.log(response);
+
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg);
+              return;
+            }
             _this.tableData = response.data.data.list;
             _this.total = response.data.data.count
           })
@@ -224,13 +234,14 @@
         window.open('/#/commodityList/name/' + this.name + '')
       },
       oper(s, n) {
+        let _this = this;
         this.postFetch('/api/admin/goods/setStatus', {
             goods_id: s.row.id,
             status: n
           },
           function (data) {
             if (data.error_code === 0) {
-              s.row.status = (n==1)?0:1;
+              _this.tableData[s.$index].status  = (n==1)?1:0;
             }
           },
           function (e) {
@@ -239,7 +250,7 @@
         )
       },
       showqq(S){
-        window.open('/#/showkc/' + this.labal + '')
+        window.open('/#/showpq/' + S.row.id + '')
       }
     },
     watch: {

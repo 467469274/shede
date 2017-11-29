@@ -1,7 +1,9 @@
 <template>
   <div>
     <router-link  to="/equipmentDetail/add" target="_blank"> <el-button type="primary">添加设备</el-button></router-link>
-
+    <el-input placeholder="请输入内容" v-model="searchVal" class="sou" style="margin-bottom:20px;width:450px;float:right;margin-right:30%">
+      <el-button slot="append" icon="search" @click="search">搜索</el-button>
+    </el-input>
     <el-table
       :data="tableData"
       style="width:90%;margin-top:28px">
@@ -73,6 +75,7 @@
         currentPage3: 1,
         currentPage4: 4,
         p:1,
+        searchVal:(this.$route.params.id!='no')?this.$route.params.id:"",
         pageSize:50
       }
     },
@@ -123,9 +126,19 @@
       },
       getData(){
         let _this = this;
-        let url = 'http://shede.sinmore.vip/api/admin/equipment/index?token=000&page='+_this.p+'&pagesize='+_this.pageSize+''
+        let sea = '';
+        if (_this.searchVal!='no'){
+          sea = '&number='+_this.searchVal;
+        }
+        let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+        let url = 'http://shede.sinmore.vip/api/admin/equipment/index?token='+token+'&page='+_this.p+'&pagesize='+_this.pageSize+sea;
         this.axios.get(url)
           .then(function (response) {
+
+            if(response.data.error_code == 8){
+              alert(response.data.error_msg);
+              return;
+            }
             _this.tableData = response.data.data.list
             _this.total = response.data.data.total
             console.log(response)
@@ -133,6 +146,16 @@
           .catch(function (response) {
             console.log(response);
           });
+      },
+      search(){
+        if (this.searchVal==''){
+          this.$message({
+            type: 'warning',
+            message: '请填写搜索值'
+          });
+        }else {
+          window.open('/#/equipmentList/' + this.searchVal + '')
+        }
       }
     }
   }

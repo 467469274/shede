@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p style="font-size: 25px">基础信息</p>
+    <p style="font-size: 25px" v-if="!isAdd&&isType">基础信息</p>
     <el-form label-position="left" label-width="150px"
-             class="demo-ruleForm">
+             class="demo-ruleForm"  v-if="!isAdd&&isType">
       <el-form-item label="订单编号" style="padding-left: 20px">
         {{order.order_sn}}
       </el-form-item>
@@ -13,9 +13,25 @@
         {{datas.member_name}}
       </el-form-item>
     </el-form>
-    <p style="font-size: 25px">评论商品</p>
-    <el-form label-position="left" label-width="150px"
-             class="demo-ruleForm">
+    <el-form label-position="left" label-width="150px" v-if="!isType">
+      <el-form-item label="评论商品">
+        <el-select v-model="god" placeholder="请选择">
+          <el-option
+            v-for="item in options"
+            :key="item.id"
+            :label="item.name"
+            :value="item.id">
+          </el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="评论人">
+        <el-input v-model="commMan" placeholder="请输入内容"></el-input>
+      </el-form-item>
+      <el-form-item label="评分">
+        <el-input v-model="commNum" placeholder="请输入内容"></el-input>
+      </el-form-item>
+    </el-form>
+    <el-form label-position="left" label-width="150px" v-if="!isAdd&&isType">
       <el-form-item label=" " style="padding-left: 20px">
         <el-table
           :data="tableData"
@@ -54,9 +70,9 @@
       </el-form-item>
     </el-form>
     <p style="font-size: 25px">评论明细</p>
-    <el-form label-position="left" label-width="150px"
+    <el-form label-position="left"
              class="demo-ruleForm">
-      <el-form-item label=" " style="padding-left: 20px">
+      <el-form-item label=" ">
         <el-input
           type="textarea"
           :rows="2"
@@ -64,7 +80,7 @@
           action="http://shede.sinmore.vip/api/storeImage"
           name="image"
           :data="{model:'banner'}"
-          v-model="datas.content">
+          v-model="textarea">
         </el-input>
         <el-upload
           class="upload-demo"
@@ -94,31 +110,61 @@
         tableData:[],
         datas:{},
         order:{},
-        fileList2:[]
+        fileList2:[],
+        isAdd:this.$route.params.id =='add',
+        isType:this.$route.params.type!='server',
+        options:[],
+        god:'',
+        commMan:'',
+        commNum:''
       }
     },
     created(){
       let _this = this;
-      this.axios.get('http://shede.sinmore.vip/api/admin/comments/detail?comment_id='+this.$route.params.id+'&token=000')
+      let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
+      this.axios.get('http://shede.sinmore.vip/api/admin/goods/index?token='+token+'&page=1&pagesize=10000')
+        .then(function (gods) {
+
+          if(gods.data.error_code == 8){
+            alert(gods.data.error_msg)
+          }
+          _this.options = gods.data.data.list;
+        })
+        .catch(function (ree) {
+          console.log(ree);
+        });
+      this.axios.get('http://shede.sinmore.vip/api/admin/comments/detail?comment_id='+this.$route.params.id+'&token='+JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token)
         .then(function (response) {
+
+          if(response.data.error_code == 8){
+            alert(response.data.error_msg)
+          }
           console.log(response.data.data)
           _this.datas = response.data.data;
           _this.order = response.data.data.order;
+          _this.textarea = response.data.data.content;
           _this.tableData.push(response.data.data.order_goods);
           let pics = response.data.data.pics;
           let ars =[];
           for (let i = 0;i<pics.length;i++){
             let obj = {
-              name:pics[i].comment_id,
-              url:pics[i].pic_url
+              name:pics[i].pic_url,
+              url:'http://shede.sinmore.vip/storage/comment/'+pics[i].pic_url
             }
             ars.push(obj)
           }
           _this.fileList2 = ars;
+
+          if (!_this.isType){
+            _this.god = response.data.data.goods_id
+            _this.commMan = response.data.data.member_name
+            _this.commNum = response.data.data.star
+          }
         })
         .catch(function (response) {
           console.log(response);
         });
+
     },
     methods:{
       handleAvatarSuccess(re){
@@ -129,32 +175,45 @@
       },
       save(){
         let _this = this;
-//        console.log(this.fileList2)
-//        /api/admin/comments/update
+//
         let ars = [],
-          picArs = _this.fileList2;
-        console.log(picArs)
+          picArs = _this.fileList2,
+          url = '/api/admin/comments/add',
+          obj = {};
         for (let i = 0;i<picArs.length;i++){
           ars.push(picArs[i].name)
         }
-        let obj = {
-          comment_id:_this.$route.params.id,
-          goods_id:_this.tableData[0].goods_id,
-          member_name:_this.datas.member_name,
-          content:_this.datas.content,
-          star:_this.datas.star,
-          commentpic:ars
-        };
-/*        _this.postFetch('/api/admin/comments/update',obj,function(data){
+
+        if(!_this.isAdd){
+          obj = {
+            comment_id:_this.$route.params.id,
+            goods_id:_this.tableData[0].goods_id,
+            member_name:_this.datas.member_name,
+            content:_this.datas.content,
+            star:_this.datas.star,
+            commentpic:ars
+          };
+          url = '/api/admin/comments/update'
+        }else {
+          obj = {
+            goods_id:_this.god,
+            member_name:_this.commMan,
+            content:_this.textarea,
+            star:_this.commNum,
+            commentpic:ars
+          }
+        }
+        console.log(obj)
+        _this.postFetch(url,obj,function(data){
           if (data.error_code === 1) {
             _this.$message({
               type: 'warning',
               message: '' + data.error_msg + ''
             });
           }else {
-            _this.$router.push({path: '/commentList/peo/0'});
+            _this.$router.push({path: '/commentList/'+_this.$route.params.type+'/0'});
           }
-        })*/
+        })
       },
       remove(file, fileList){
         for (let i = 0; i < this.fileList2.length; i++) {

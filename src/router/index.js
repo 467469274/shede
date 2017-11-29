@@ -18,7 +18,14 @@ import commentList from '@/components/comment/commentList'
 import commodityList from '@/components/commodity/commodityList'
 import commentDetail from '@/components/comment/commentDetail'
 import commodityDetail from '@/components/commodity/commodityDetail'
-import showkc from '@/components/showkc/showkc'
+import course from '@/components/commodity/course'
+import showkc from '@/components/commodity/showkc'
+import showpq from '@/components/showpq/showpq'
+import adminList from '@/components/admin/adminList'
+import addAdmin from '@/components/admin/addAdmin'
+import adminTeamList from '@/components/admin/adminTeamList'
+import addTeam from '@/components/admin/addTeam'
+import menberList from '@/components/menber/menberList'
 
 Vue.use(Router);
 
@@ -85,7 +92,7 @@ export default new Router({
       name: 'commentList',
       component: commentList
     },{
-      path: '/commentDetail/:id',
+      path: '/commentDetail/:id/:type',
       name: 'commentDetail',
       component: commentDetail
     },{
@@ -96,10 +103,38 @@ export default new Router({
       path: '/commodityDetail/:id',
       name: 'commodityDetail',
       component: commodityDetail
-    },,{
+    },{
+      path: '/showpq/:id',
+      name: 'showpq',
+      component: showpq
+    },{
+      path: '/course/:id',
+      name: 'course',
+      component: course
+    },{
       path: '/showkc/:id',
       name: 'showkc',
       component: showkc
+    },{
+      path: '/adminList',
+      name: 'adminList',
+      component: adminList
+    },{
+      path: '/addAdmin/:id',
+      name: 'addAdmin',
+      component: addAdmin
+    },{
+      path: '/adminTeamList',
+      name: 'adminTeamList',
+      component: adminTeamList
+    },{
+      path: '/addTeam/:id',
+      name: 'addTeam',
+      component: addTeam
+    },{
+      path: '/menberList/:id',
+      name: 'menberList',
+      component: menberList
     },
     {
       path: '*',

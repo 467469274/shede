@@ -34,7 +34,7 @@
       <div class="header">
         <headerText></headerText>
         <div class="user">
-          欢迎您！<!--{{userData.user_name}}--><a>退出登录</a></div>
+          欢迎您！{{myname}}<a>退出登录</a></div>
       </div>
       <div class="sidebar">
         <div class="logo">共好电商后台</div>
@@ -74,7 +74,7 @@
               </router-link>
             </el-menu-item>
             <el-menu-item index="2-3" class="se">
-              <router-link to="/equipmentList/add"
+              <router-link to="/equipmentList/no"
                            class="routerLink">
                 设备管理
               </router-link>
@@ -83,12 +83,6 @@
               <router-link to="/commentList/peo/0"
                            class="routerLink">
                 评论列表
-              </router-link>
-            </el-menu-item>
-            <el-menu-item index="2-4" class="se">
-              <router-link to="/commentList/server/0"
-                           class="routerLink">
-                后台评论
               </router-link>
             </el-menu-item>
             <el-menu-item index="2-4" class="se">
@@ -106,6 +100,35 @@
               <router-link to="/orderList"
                            class="routerLink">
                 订单列表
+              </router-link>
+            </el-menu-item>
+          </el-submenu>
+          <el-submenu index="4">
+            <template slot="title">
+              <router-link class="routerLink"
+                           to="">权限管理
+              </router-link>
+            </template>
+            <el-menu-item index="7-2" class="se">
+              <router-link class="routerLink"
+                           to="/adminList">管理员管理
+              </router-link>
+            </el-menu-item>
+            <el-menu-item index="7-2" class="se">
+              <router-link class="routerLink"
+                           to="/adminTeamList">
+                管理员组管理
+              </router-link>
+            </el-menu-item>
+          </el-submenu>
+          <el-submenu  index="5">
+            <template slot="title">
+              会员管理
+            </template>
+            <el-menu-item index="3-1" class="se">
+              <router-link to="/menberList/no"
+                           class="routerLink">
+                会员列表
               </router-link>
             </el-menu-item>
           </el-submenu>
@@ -161,20 +184,21 @@
         radio: '1',
         userName: '',
         pwd: '',
-        show: true
+        show: false,
+        myname:''
       }
     },
     created(){
-/*      let userCookie = getCookie('userCookie');
+      let userCookie = getCookie('userCookie');
       if (userCookie != null && userCookie != "") {
-        console.log('有缓存');
-        this.getUser(userCookie);
+        let user = JSON.parse(userCookie);
+        user = JSON.parse(user)
         this.show = true;
-        this.getList(JSON.parse(userCookie))
-      }*/
+        this.myname = user.name
+      }
     },
     methods: {
-/*      login(){
+      login(){
         if (this.userName == '') {
           this.$message({
             type: 'warning',
@@ -187,91 +211,28 @@
           });
         } else {
           let _this = this;
-          _this.postFetch('/admin/adminlogin', {
-            loginname: _this.userName,
+          _this.postFetch('/api/adminLogin', {
+            username: _this.userName,
             password: _this.pwd
           }, function (data) {
-            if (data.error_code == 1) {
+            if (data.error_code != 0) {
               _this.$message({
                 type: 'warning',
                 message: '' + data.error_msg + ''
               });
             } else {
+              console.log(data.data);
+              setCookie('userCookie',JSON.stringify(data.data))
               _this.show = true;
-              setCookie('userCookie', data.data, 1);
-              _this.getList(data.data)
             }
           })
         }
-      },
-      getList(objs){
-//        let objs = JSON.parse(obj);
-        let _this = this;
-        _this.postFetch('/admin/sys/getSysMenuListByAdmin', {
-          admin_id: objs.id
-        }, function (data) {
-          console.log(data);
-          if(data.error_code == 0){
-            for (let i = 0; i < data.data.length; i++) {
-              switch (data.data[i].menu_name) {
-                case '订单管理':
-                  _this.ddgl = true;
-                  break;
-                case '会员管理':
-                  _this.hygl = true;
-                  break;
-                case '商品管理':
-                  _this.spgl = true;
-                  break;
-                case '分类管理':
-                  _this.flgl = true;
-                  break;
-                case '评价管理-商品':
-                  _this.plglsp = true;
-                  break;
-                case '评价管理-资讯':
-                  _this.plglzx = true;
-                  break;
-                case '内容管理':
-                  _this.nrgl = true;
-                  break;
-                case '商家管理':
-                  _this.sjgl = true;
-                  break;
-                case '权限管理':
-                  _this.qxgl = true;
-                  break;
-                case '热搜管理':
-                  _this.rsgl = true;
-                  break;
-                case '版本管理':
-                  _this.bbgl = true;
-                  break;
-                case '服务反馈表单':
-                  _this.fwfkbd = true;
-                  break;
-                case '启动图管理':
-                  _this.qdtgl = true;
-                  break;
-              }
-            }
-          }else {
-            delAllCookie();
-            window.location.reload()
-          }
-        })
-      },
-      ...mapActions([
-        'getUser'
-      ])*/
+      }
     },
     components: {
       headerText
     },
     computed: {
-/*      ...mapGetters([
-        "userData"
-      ])*/
     }
   }
 </script>

@@ -11,10 +11,12 @@ import 'element-ui/lib/theme-default/index.css';
 import "../static/css/commdetail/commdetail.css";
 import {getDate} from '@/common/js/date'
 import {postFetch} from './common/js/fetch';
+import {getCookie} from './common/js/getCookie';
 import $ from 'jquery';
 Vue.prototype.postFetch = postFetch;
 Vue.prototype.getDate = getDate;
 Vue.prototype.axios = axios;
+Vue.prototype.getCookie = getCookie;
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 //Vue.use(VueQuillEditor);

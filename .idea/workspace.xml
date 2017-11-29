@@ -2,7 +2,360 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="150a4c5f-1014-49f9-b490-ae942e3bff4a" name="默认的" comment="会员详情&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/js/getCookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/admin/addAdmin.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/admin/addTeam.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/admin/adminTeamList.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/commodity/course.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/commodity/showkc.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/menber/menberList.vue" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/dist.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.3dd42654326ed40ac8963243fd30395b.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.3dd42654326ed40ac8963243fd30395b.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.c3c56aff7ed867a849db.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.c3c56aff7ed867a849db.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.5b5efb22bdf1a78c7154.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.5b5efb22bdf1a78c7154.js.map" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/showkc/showkc.vue" afterPath="$PROJECT_DIR$/src/components/showpq/showpq.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/loginLeft_03.jpg" afterPath="$PROJECT_DIR$/dist/static/css/login/images/loginLeft_03.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/loging_03.jpg" afterPath="$PROJECT_DIR$/dist/static/css/login/images/loging_03.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/main-icon1.png" afterPath="$PROJECT_DIR$/dist/static/css/login/images/main-icon1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/nav-icon1.png" afterPath="$PROJECT_DIR$/dist/static/css/login/images/nav-icon1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/search-icon.png" afterPath="$PROJECT_DIR$/dist/static/css/login/images/search-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/sinmore-logo.png" afterPath="$PROJECT_DIR$/dist/static/css/login/images/sinmore-logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/images/user-icon.png" afterPath="$PROJECT_DIR$/dist/static/css/login/images/user-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/d79188de9c82d1588b5274f9890a19d8bd3e4239.jpg" afterPath="$PROJECT_DIR$/dist/static/d79188de9c82d1588b5274f9890a19d8bd3e4239.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/fonts/element-icons.b02bdc1.ttf" afterPath="$PROJECT_DIR$/dist/static/fonts/element-icons.b02bdc1.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/img/loginLeft_03.19772af.jpg" afterPath="$PROJECT_DIR$/dist/static/img/loginLeft_03.19772af.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/alignicon.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/alignicon.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/alignicon.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/alignicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/file-icons.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/file-icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/file-icons.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/file-icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/icons.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/icons.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/image.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/progress.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/progress.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/success.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/success.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/success.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/images/success.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/images/bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/images/bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/images/success.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/images/success.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts0.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts1.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts2.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts3.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts4.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts5.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/images/charts5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/0.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/0.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/bface.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/bface.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/cface.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/cface.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/fface.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/fface.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/jxface2.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/jxface2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/tface.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/tface.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/wface.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/wface.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/yface.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/images/yface.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/alignicon.jpg" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/alignicon.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/icons.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/icons.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/image.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/progress.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/progress.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/success.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/success.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/success.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/images/success.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/addimg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/addimg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/brush.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/brush.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/delimg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/delimg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/delimgH.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/delimgH.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/empty.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/empty.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/emptyH.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/emptyH.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/eraser.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/eraser.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/redo.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/redo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/redoH.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/redoH.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/scale.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/scale.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/scaleH.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/scaleH.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/size.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/size.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/undo.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/undo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/undoH.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/images/undoH.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/dragicon.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/dragicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/bg.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/bg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre0.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre1.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre2.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre3.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre4.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/images/pre4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/center_focus.jpg" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/center_focus.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/file-icons.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/file-icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/file-icons.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/file-icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/icons.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/icons.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/image.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/left_focus.jpg" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/left_focus.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/none_focus.jpg" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/none_focus.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/progress.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/progress.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/right_focus.jpg" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/right_focus.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/success.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/success.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/success.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/images/success.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/imageUploader.swf" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/imageUploader.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/commons-codec-1.9.jar" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/commons-codec-1.9.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/commons-fileupload-1.3.1.jar" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/commons-fileupload-1.3.1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/commons-io-2.4.jar" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/commons-io-2.4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/json.jar" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/json.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/ueditor-1.1.2.jar" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/lib/ueditor-1.1.2.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/addimage.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/addimage.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/alldeletebtnhoverskin.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/alldeletebtnhoverskin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/alldeletebtnupskin.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/alldeletebtnupskin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/background.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/background.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/button.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/button.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/copy.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/copy.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/deletedisable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/deletedisable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/deleteenable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/deleteenable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/listbackground.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/listbackground.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/localimage.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/localimage.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/music.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/music.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotateleftdisable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotateleftdisable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotateleftenable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotateleftenable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotaterightdisable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotaterightdisable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotaterightenable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/rotaterightenable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/upload.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/images/upload.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/copy.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/copy.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/localimage.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/localimage.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/music.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/music.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/upload.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/images/upload.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/anchor.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/anchor.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/arrow.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/arrow_down.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/arrow_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/arrow_up.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/arrow_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/button-bg.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/button-bg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cancelbutton.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cancelbutton.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/charts.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/charts.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_h.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_h.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_h.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_v.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_v.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_v.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/cursor_v.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/dialog-title-bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/dialog-title-bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/filescan.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/filescan.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/highlighted.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/highlighted.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/icons-all.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/icons-all.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/icons.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/icons.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/loaderror.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/loaderror.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/loading.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/lock.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/lock.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/neweditor-tab-bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/neweditor-tab-bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/pagebreak.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/pagebreak.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/scale.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/scale.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/sortable.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/sortable.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/spacer.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/spacer.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/sparator_v.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/sparator_v.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/table-cell-align.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/table-cell-align.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/tangram-colorpicker.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/tangram-colorpicker.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/toolbar_bg.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/toolbar_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/unhighlighted.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/unhighlighted.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/upload.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/upload.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/videologo.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/videologo.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/word.gif" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/word.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/wordpaste.png" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/images/wordpaste.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.eot" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.ttf" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.woff" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video-js.swf" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video-js.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/Uploader.swf" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/Uploader.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/baes.css" afterPath="$PROJECT_DIR$/dist/static/css/baes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/commdetail/commAdd/commAdd.css" afterPath="$PROJECT_DIR$/dist/static/css/commdetail/commAdd/commAdd.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/commdetail/commAdd/commAdd.less" afterPath="$PROJECT_DIR$/dist/static/css/commdetail/commAdd/commAdd.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/commdetail/commdetail.css" afterPath="$PROJECT_DIR$/dist/static/css/commdetail/commdetail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/commdetail/commdetail.less" afterPath="$PROJECT_DIR$/dist/static/css/commdetail/commdetail.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/common/common.css" afterPath="$PROJECT_DIR$/dist/static/css/common/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/common/common.less" afterPath="$PROJECT_DIR$/dist/static/css/common/common.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/index/index.css" afterPath="$PROJECT_DIR$/dist/static/css/index/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/index/navself.css" afterPath="$PROJECT_DIR$/dist/static/css/index/navself.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/index/sectionOne.css" afterPath="$PROJECT_DIR$/dist/static/css/index/sectionOne.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/css/common.css" afterPath="$PROJECT_DIR$/dist/static/css/login/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/css/gxkgg.css" afterPath="$PROJECT_DIR$/dist/static/css/login/css/gxkgg.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/css/login.css" afterPath="$PROJECT_DIR$/dist/static/css/login/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/css/sanfuitem.css" afterPath="$PROJECT_DIR$/dist/static/css/login/css/sanfuitem.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/css/search.css" afterPath="$PROJECT_DIR$/dist/static/css/login/css/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/login/css/searchlist.css" afterPath="$PROJECT_DIR$/dist/static/css/login/css/searchlist.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/merchant/merchant.css" afterPath="$PROJECT_DIR$/dist/static/css/merchant/merchant.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/order/addConsult.css" afterPath="$PROJECT_DIR$/dist/static/css/order/addConsult.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/order/dfh.css" afterPath="$PROJECT_DIR$/dist/static/css/order/dfh.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/order/order.css" afterPath="$PROJECT_DIR$/dist/static/css/order/order.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/order/sh.css" afterPath="$PROJECT_DIR$/dist/static/css/order/sh.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/order/shxq.css" afterPath="$PROJECT_DIR$/dist/static/css/order/shxq.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/others/hot.css" afterPath="$PROJECT_DIR$/dist/static/css/others/hot.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/sort/argadd.css" afterPath="$PROJECT_DIR$/dist/static/css/sort/argadd.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/sort/arguement.css" afterPath="$PROJECT_DIR$/dist/static/css/sort/arguement.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/sort/guige.css" afterPath="$PROJECT_DIR$/dist/static/css/sort/guige.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/sort/sort.css" afterPath="$PROJECT_DIR$/dist/static/css/sort/sort.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/sort/sortadd.css" afterPath="$PROJECT_DIR$/dist/static/css/sort/sortadd.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/css/vip/vip.css" afterPath="$PROJECT_DIR$/dist/static/css/vip/vip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/anchor/anchor.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/anchor/anchor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/attachment.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/attachment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/attachment.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/attachment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/attachment.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/attachment/attachment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/background.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/background.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/background.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/background.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/background.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/background/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/chart.config.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/chart.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/charts.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/charts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/charts.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/charts.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/charts/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/emotion.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/emotion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/emotion.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/emotion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/emotion.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/emotion/emotion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/gmap/gmap.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/gmap/gmap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/help/help.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/help/help.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/help/help.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/help/help.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/help/help.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/help/help.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/image.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/image.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/image.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/image/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/insertframe/insertframe.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/insertframe/insertframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/internal.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/internal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/link/link.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/link/link.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/map/map.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/map/map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/map/show.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/map/show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/music/music.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/music/music.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/music/music.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/music/music.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/music/music.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/music/music.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/preview/preview.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/preview/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/scrawl.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/scrawl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/scrawl.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/scrawl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/scrawl.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/scrawl/scrawl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/searchreplace/searchreplace.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/searchreplace/searchreplace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/searchreplace/searchreplace.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/searchreplace/searchreplace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/snapscreen/snapscreen.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/snapscreen/snapscreen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/spechars/spechars.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/spechars/spechars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/spechars/spechars.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/spechars/spechars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittable.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittable.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittable.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittd.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittip.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/table/edittip.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/config.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/template.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/template.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/template.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/template/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/video.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/video.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/video.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/video.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/video/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/webapp/webapp.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/webapp/webapp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/tangram.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/tangram.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/wordimage.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/wordimage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/wordimage.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/dialogs/wordimage/wordimage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/index.html" afterPath="$PROJECT_DIR$/dist/static/ueditor/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/config.json" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/jsp/controller.jsp" afterPath="$PROJECT_DIR$/dist/static/ueditor/jsp/controller.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/en/en.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/en/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/zh-cn.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/lang/zh-cn/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/css/ueditor.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/css/ueditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/css/ueditor.min.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/css/ueditor.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/default/dialogbase.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/default/dialogbase.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/themes/iframe.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/themes/iframe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/SyntaxHighlighter/shCore.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/SyntaxHighlighter/shCore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/codemirror/codemirror.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/codemirror/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/codemirror/codemirror.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/codemirror/codemirror.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/mootools-adapter.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/mootools-adapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/prototype-adapter.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/prototype-adapter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/standalone-framework.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/standalone-framework.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts-more.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts-more.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts-more.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts-more.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/highcharts.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/annotations.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/annotations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/annotations.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/annotations.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/canvas-tools.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/canvas-tools.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/canvas-tools.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/canvas-tools.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/data.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/data.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/data.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/drilldown.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/drilldown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/drilldown.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/drilldown.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/exporting.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/exporting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/exporting.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/exporting.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/funnel.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/funnel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/funnel.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/funnel.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/heatmap.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/heatmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/heatmap.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/heatmap.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/map.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/map.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/map.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/no-data-to-display.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/no-data-to-display.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/dark-blue.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/dark-blue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/dark-green.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/dark-green.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/gray.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/gray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/grid.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/skies.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/highcharts/themes/skies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/jquery-1.10.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/jquery-1.10.2.min.map" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/jquery-1.10.2.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.svg" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/font/vjs.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video-js.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video-js.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video-js.min.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video-js.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video.dev.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video.dev.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/video-js/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.css" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.custom.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.custom.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.flashonly.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.flashonly.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.flashonly.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.flashonly.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.html5only.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.html5only.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.html5only.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.html5only.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.withoutimage.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.withoutimage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/xss.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/xss.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/zeroclipboard/ZeroClipboard.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/zeroclipboard/ZeroClipboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/ueditor.all.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/ueditor.all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/ueditor.all.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/ueditor.all.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/ueditor.config.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/ueditor.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/ueditor.parse.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/ueditor.parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/ueditor/ueditor.parse.min.js" afterPath="$PROJECT_DIR$/dist/static/ueditor/ueditor.parse.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/js/fetch.js" afterPath="$PROJECT_DIR$/src/common/js/fetch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/branch/branchDetail.vue" afterPath="$PROJECT_DIR$/src/components/branch/branchDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/branch/branchList.vue" afterPath="$PROJECT_DIR$/src/components/branch/branchList.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/commentDetail.vue" afterPath="$PROJECT_DIR$/src/components/comment/commentDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comment/commentList.vue" afterPath="$PROJECT_DIR$/src/components/comment/commentList.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/commodity/commodityDetail.vue" afterPath="$PROJECT_DIR$/src/components/commodity/commodityDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/commodity/commodityList.vue" afterPath="$PROJECT_DIR$/src/components/commodity/commodityList.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/content/contentDetail.vue" afterPath="$PROJECT_DIR$/src/components/content/contentDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/equipment/equipmentDetail.vue" afterPath="$PROJECT_DIR$/src/components/equipment/equipmentDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/equipment/equipmentList.vue" afterPath="$PROJECT_DIR$/src/components/equipment/equipmentList.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/labelAd/labelAd.vue" afterPath="$PROJECT_DIR$/src/components/labelAd/labelAd.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/labelAd/labelAdd.vue" afterPath="$PROJECT_DIR$/src/components/labelAd/labelAdd.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue" afterPath="$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/order/orderDetail.vue" afterPath="$PROJECT_DIR$/src/components/order/orderDetail.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/quilleditor/Quilleditor.vue" afterPath="$PROJECT_DIR$/src/components/quilleditor/Quilleditor.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
     </list>
     <ignored path="gonghao_html.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,52 +374,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="logisticsDetail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue">
+      <file leaf-file-name="fetch.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/js/fetch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="156" column="9" lean-forward="true" selection-start-line="137" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+            <state relative-caret-position="76">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commodityList.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/commodity/commodityList.vue">
+      <file leaf-file-name="addTeam.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/admin/addTeam.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="206" column="37" lean-forward="false" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="37" />
-              <folding>
-                <element signature="e#146#152#0" expanded="true" />
-                <element signature="e#152#158#0" expanded="true" />
-                <element signature="e#158#164#0" expanded="true" />
-                <element signature="n#style#0;n#el-input#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showkc.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/showkc/showkc.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="63" column="34" lean-forward="false" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-              <folding>
-                <element signature="n#style#0;n#el-table#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="738">
+              <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,13 +409,46 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>formatDate</find>
-      <find>data</find>
-      <find>prop</find>
+      <find>isAdd</find>
+      <find>adminGroupArr</find>
+      <find>ateam</find>
+      <find>change</find>
+      <find>status</find>
+      <find>/api/admin/auth/delauthgroup</find>
+      <find>checkArr</find>
+      <find>yTpe</find>
+      <find>wdops</find>
+      <find>choseWd2</find>
+      <find>onSubmit</find>
+      <find>shr</find>
+      <find>beizhu</find>
+      <find>imgUrl</find>
+      <find>sure</find>
+      <find>kfry</find>
+      <find>show</find>
+      <find>login</find>
+      <find>getUser</find>
+      <find>000</find>
+      <find>token=</find>
+      <find>t\</find>
+      <find>let token \= JSON\.parse\(JSON\.parse\(getCookie\(\'userCookie\'\)\)\)\.token\;\n</find>
+      <find>token=000</find>
+      <find>token=00</find>
+      <find>getCookie</find>
+      <find>this.axios.get</find>
+      <find>axios.get</find>
+      <find>axios.ge</find>
+      <find>getauthlist</find>
     </findStrings>
     <replaceStrings>
+      <replace>showpq</replace>
       <replace />
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/components/showkc</dir>
+      <dir>$PROJECT_DIR$/../</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,21 +456,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/power/adminTeam.vue" />
-        <option value="$PROJECT_DIR$/src/components/sectionOne/sectionOne.vue" />
-        <option value="$PROJECT_DIR$/src/components/order/order.vue" />
-        <option value="$PROJECT_DIR$/src/components/comment/commentGoods.vue" />
-        <option value="$PROJECT_DIR$/src/components/comment/commentInfo.vue" />
-        <option value="$PROJECT_DIR$/src/components/loging/login.vue" />
-        <option value="$PROJECT_DIR$/src/components/loging/loging.vue" />
-        <option value="$PROJECT_DIR$/src/components/commList/commList.vue" />
-        <option value="$PROJECT_DIR$/src/components/login.vue" />
-        <option value="$PROJECT_DIR$/src/components/login/login.vue" />
-        <option value="$PROJECT_DIR$/src/store/modules/commodity.js" />
-        <option value="$PROJECT_DIR$/src/components/commList/commSpecification/commSpecification.vue" />
-        <option value="$PROJECT_DIR$/src/components/manageInfo/addConsult.vue" />
-        <option value="$PROJECT_DIR$/src/components/manageInfo/addimg.vue" />
-        <option value="$PROJECT_DIR$/src/components/power/addTeam.vue" />
         <option value="$PROJECT_DIR$/src/components/power/addadmin.vue" />
         <option value="$PROJECT_DIR$/src/components/others/addHot.vue" />
         <option value="$PROJECT_DIR$/src/components/others/hot.vue" />
@@ -127,46 +468,64 @@
         <option value="$PROJECT_DIR$/build/webpack.base.conf.js" />
         <option value="$PROJECT_DIR$/src/common/js/getDate.js" />
         <option value="$PROJECT_DIR$/src/common/js/date.js" />
-        <option value="$PROJECT_DIR$/src/components/content/contentList.vue" />
-        <option value="$PROJECT_DIR$/src/components/content/contentDetail.vue" />
         <option value="$PROJECT_DIR$/src/components/order/orderList.vue" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/labelAd/labelAd.vue" />
         <option value="$PROJECT_DIR$/src/components/bannerList/bannerList.vue" />
         <option value="$USER_HOME$/AppData/Local/Temp/360zip$Temp/360$2/city-data.js" />
         <option value="$PROJECT_DIR$/src/components/merchandise/merchandiseList.vue" />
         <option value="$PROJECT_DIR$/src/components/bannerList/addBanner.vue" />
-        <option value="$PROJECT_DIR$/src/components/labelAd/labelAdd.vue" />
-        <option value="$PROJECT_DIR$/src/components/order/orderDetail.vue" />
-        <option value="$PROJECT_DIR$/src/components/equipment/equipmentDetail.vue" />
-        <option value="$PROJECT_DIR$/src/components/branch/branchDetail.vue" />
         <option value="$PROJECT_DIR$/static/dq.json" />
+        <option value="$PROJECT_DIR$/src/components/showkc/showkc.vue" />
+        <option value="$PROJECT_DIR$/src/components/showkc/showpq.vue" />
+        <option value="$PROJECT_DIR$/src/components/commodity/showkc.vue" />
+        <option value="$PROJECT_DIR$/src/components/content/contentList.vue" />
         <option value="$PROJECT_DIR$/src/components/comment/commentList.vue" />
-        <option value="$PROJECT_DIR$/src/components/comment/commentDetail.vue" />
+        <option value="$PROJECT_DIR$/src/components/quilleditor/Quilleditor.vue" />
+        <option value="$PROJECT_DIR$/src/components/content/contentDetail.vue" />
+        <option value="$PROJECT_DIR$/src/components/adminTeam/adminTeam.vue" />
+        <option value="$PROJECT_DIR$/src/components/adminTeam/addTeam.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/components/menber/menberList.vue" />
+        <option value="$PROJECT_DIR$/src/components/admin/adminTeamList.vue" />
+        <option value="$PROJECT_DIR$/src/components/admin/adminList.vue" />
+        <option value="$PROJECT_DIR$/src/components/admin/addAdmin.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/components/equipment/equipmentList.vue" />
-        <option value="$PROJECT_DIR$/src/common/js/fetch.js" />
-        <option value="$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue" />
-        <option value="$PROJECT_DIR$/src/components/branch/branchList.vue" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/dist/static/js/app.a8edcc870f228bc59838.js" />
+        <option value="$PROJECT_DIR$/src/components/commodity/commodityDetail.vue" />
         <option value="$PROJECT_DIR$/src/components/commodity/commodityList.vue" />
-        <option value="$PROJECT_DIR$/src/components/showkc/showkc.vue" />
+        <option value="$PROJECT_DIR$/src/components/comment/commentDetail.vue" />
+        <option value="$PROJECT_DIR$/src/components/commodity/course.vue" />
+        <option value="$PROJECT_DIR$/src/components/equipment/equipmentDetail.vue" />
+        <option value="$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue" />
+        <option value="$PROJECT_DIR$/src/components/labelAd/labelAdd.vue" />
+        <option value="$PROJECT_DIR$/src/components/branch/branchList.vue" />
+        <option value="$PROJECT_DIR$/src/components/showpq/showpq.vue" />
+        <option value="$PROJECT_DIR$/src/common/js/getCookie.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/components/order/orderDetail.vue" />
+        <option value="$PROJECT_DIR$/src/components/branch/branchDetail.vue" />
+        <option value="$PROJECT_DIR$/src/common/js/fetch.js" />
+        <option value="$PROJECT_DIR$/src/components/admin/addTeam.vue" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="959" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="添加" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -183,8 +542,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,37 +552,49 @@
             <path>
               <item name="shede" type="b2602c69:ProjectViewProjectNode" />
               <item name="shede" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shede" type="b2602c69:ProjectViewProjectNode" />
               <item name="shede" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shede" type="b2602c69:ProjectViewProjectNode" />
               <item name="shede" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shede" type="b2602c69:ProjectViewProjectNode" />
               <item name="shede" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shede" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shede" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="editor.config.accepted" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="262" />
@@ -253,11 +622,11 @@
       <recent name="I:\gonghao_html\src\components\loging\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/js" />
       <recent name="I:\shede\src\components" />
       <recent name="I:\shede\src\common\js" />
       <recent name="I:\gonghao_html\static\css\login" />
       <recent name="I:\gonghao_html\static\css\login\images" />
-      <recent name="I:\gonghao_html\src\components\loging" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -337,7 +706,30 @@
       <updated>1504507620551</updated>
       <workItem from="1511101224851" duration="4196000" />
       <workItem from="1511184423270" duration="5000" />
-      <workItem from="1511184474041" duration="9678000" />
+      <workItem from="1511184474041" duration="10230000" />
+      <workItem from="1511229888611" duration="79000" />
+      <workItem from="1511273127671" duration="9594000" />
+      <workItem from="1511286922076" duration="251000" />
+      <workItem from="1511329681452" duration="1278000" />
+      <workItem from="1511354909246" duration="8523000" />
+      <workItem from="1511445638085" duration="97000" />
+      <workItem from="1511449847583" duration="845000" />
+      <workItem from="1511451616847" duration="125000" />
+      <workItem from="1511451765532" duration="4000" />
+      <workItem from="1511451825078" duration="194000" />
+      <workItem from="1511452117597" duration="80000" />
+      <workItem from="1511452256532" duration="3581000" />
+      <workItem from="1511489453354" duration="174000" />
+      <workItem from="1511531119299" duration="1701000" />
+      <workItem from="1511547711023" duration="99000" />
+      <workItem from="1511616264244" duration="213000" />
+      <workItem from="1511671663998" duration="15052000" />
+      <workItem from="1511798313015" duration="3570000" />
+      <workItem from="1511873155622" duration="1000" />
+      <workItem from="1511873173798" duration="8864000" />
+      <workItem from="1511962872485" duration="5626000" />
+      <workItem from="1511970902921" duration="1108000" />
+      <workItem from="1511972028588" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="商品列表页，编辑">
       <created>1504523510156</created>
@@ -665,58 +1057,35 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13879000" />
+    <option name="totallyTimeSpent" value="76222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27378437" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.86469346" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.273" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.86469346" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27378437" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -747,44 +1116,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/content/contentDetail.vue</url>
+          <line>94</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/sort/guige.css" />
-    <entry file="file://$PROJECT_DIR$/node_modules/webpack/lib/Compilation.js" />
-    <entry file="file://$PROJECT_DIR$/build/build.js" />
-    <entry file="file://I:/最终/新墨后台/sinmore/login.html" />
-    <entry file="file://$PROJECT_DIR$/src/store/modules/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/store/index.js" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/build/dev-server.js" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="194" column="14" lean-forward="false" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/modules/commodity.js" />
     <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/components/quilleditor/Quilleditor.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.dev.conf.js" />
     <entry file="file://$PROJECT_DIR$/build/vue-loader.conf.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/quilleditor/CropUpload.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js" />
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
@@ -811,7 +1157,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json" />
     <entry file="file://$PROJECT_DIR$/dist/static/js/app.c3c56aff7ed867a849db.js" />
-    <entry file="file://$PROJECT_DIR$/src/main.js" />
     <entry file="file://$PROJECT_DIR$/src/components/labelAd/labelAd.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -819,58 +1164,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/order/orderList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="246" column="20" lean-forward="false" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/merchandise/merchandiseList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/equipment/equipmentDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="76" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/static/css/app.3dd42654326ed40ac8963243fd30395b.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/order/orderDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="81" column="33" lean-forward="false" selection-start-line="81" selection-start-column="33" selection-end-line="82" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/labelAd/labelAdd.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="19" selection-end-line="68" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/dq.json" />
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="94" column="51" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bannerList/bannerList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/headerText/headerText.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -878,141 +1173,259 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/equipment/equipmentList.vue">
+    <entry file="file://$PROJECT_DIR$/src/common/js/date.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="134" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bannerList/addBanner.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/showkc/showkc..vue" />
+    <entry file="file://$PROJECT_DIR$/src/components/order/orderList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="55" column="81" lean-forward="false" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="81" />
+        <state relative-caret-position="4674">
+          <caret line="246" column="20" lean-forward="false" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/content/contentDetail.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/commodity/showkc.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="92" column="11" lean-forward="true" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="76">
+          <caret line="4" column="82" lean-forward="false" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/merchandise/merchandiseList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/content/contentList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="95" column="7" lean-forward="false" selection-start-line="95" selection-start-column="7" selection-end-line="125" selection-end-column="7" />
+        <state relative-caret-position="608">
+          <caret line="138" column="25" lean-forward="true" selection-start-line="138" selection-start-column="25" selection-end-line="139" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/quilleditor/CropUpload.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/quilleditor/Quilleditor.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="296" column="34" lean-forward="false" selection-start-line="296" selection-start-column="34" selection-end-line="296" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/content/contentDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3561">
+          <caret line="195" column="25" lean-forward="true" selection-start-line="195" selection-start-column="25" selection-end-line="195" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/js/date.js">
+    <entry file="file://$PROJECT_DIR$/src/components/menber/menberDetail.vue" />
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/js/fetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="733">
+          <caret line="136" column="27" lean-forward="false" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/comment/commentList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="83" column="22" lean-forward="false" selection-start-line="83" selection-start-column="22" selection-end-line="91" selection-end-column="9" />
+        <state relative-caret-position="684">
+          <caret line="179" column="9" lean-forward="true" selection-start-line="179" selection-start-column="9" selection-end-line="188" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin/adminTeamList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="94" column="11" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="94" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/bannerList/addBanner.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="55" column="81" lean-forward="false" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/equipment/equipmentList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/branch/branchList.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/menber/menberList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="162" column="12" lean-forward="true" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#el-input#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="156" column="9" lean-forward="true" selection-start-line="137" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+        <state relative-caret-position="657">
+          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/branch/branchDetail.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/bannerList/bannerList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="-1387">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin/addAdmin.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1671">
+          <caret line="111" column="43" lean-forward="false" selection-start-line="111" selection-start-column="43" selection-end-line="111" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin/adminList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/commodity/commodityDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="233">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/showkc/showkc..vue">
+    <entry file="file://$PROJECT_DIR$/src/components/equipment/equipmentDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="131" column="82" lean-forward="false" selection-start-line="131" selection-start-column="82" selection-end-line="131" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/logisticsDetail/logisticsDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="316">
+          <caret line="164" column="74" lean-forward="false" selection-start-line="164" selection-start-column="74" selection-end-line="164" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comment/commentDetail.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/labelAd/labelAdd.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="114" column="25" lean-forward="false" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+        <state relative-caret-position="385">
+          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/commodity/commodityList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="206" column="37" lean-forward="false" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="37" />
-          <folding>
-            <element signature="e#146#152#0" expanded="true" />
-            <element signature="e#152#158#0" expanded="true" />
-            <element signature="e#158#164#0" expanded="true" />
-            <element signature="n#style#0;n#el-input#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="207" column="19" lean-forward="false" selection-start-line="207" selection-start-column="19" selection-end-line="207" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/showkc/showkc.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/comment/commentDetail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="63" column="34" lean-forward="false" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#el-table#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="62">
+          <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/commodity/course.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/showpq/showpq.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="179" column="8" lean-forward="false" selection-start-line="179" selection-start-column="8" selection-end-line="179" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/branch/branchList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="154" column="28" lean-forward="false" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/order/orderDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="256" column="12" lean-forward="true" selection-start-line="256" selection-start-column="12" selection-end-line="256" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/static/js/app.a8edcc870f228bc59838.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="0" column="4924" lean-forward="false" selection-start-line="0" selection-start-column="4924" selection-end-line="0" selection-end-column="4924" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/branch/branchDetail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="126" column="22" lean-forward="false" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js/getCookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js/fetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin/addTeam.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
