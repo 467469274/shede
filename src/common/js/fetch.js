@@ -4,7 +4,11 @@
 import axios from 'axios';
 var qs = require('qs');
 export function postFetch(url,data,call) {
-  var token = '1';
+  var u = getCookie('userCookie');
+  var token='';
+  if (u!=''){
+    token = JSON.parse(JSON.parse(u)).token;
+  }
   data.token = token;
   var postData  = qs.stringify(data);
   axios({
@@ -16,7 +20,6 @@ export function postFetch(url,data,call) {
     dataType:'json',
     data:postData
   }).then(function(re){
-    console.log(re)
     call(re.data);
     if(re.data.error_code == 8){
       alert(''+re.data.error_msg+'')

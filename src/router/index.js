@@ -13,6 +13,7 @@ import branchDetail from '@/components/branch/branchDetail'
 import equipmentDetail from '@/components/equipment/equipmentDetail'
 import logisticsDetail from '@/components/logisticsDetail/logisticsDetail'
 import orderDetail from '@/components/order/orderDetail'
+import orderInnerList from '@/components/order/orderInnerList'
 import orderList from '@/components/order/orderList'
 import commentList from '@/components/comment/commentList'
 import commodityList from '@/components/commodity/commodityList'
@@ -79,6 +80,10 @@ export default new Router({
       path: '/orderDetail/:id',
       name: 'orderDetail',
       component: orderDetail
+    },{
+      path: '/orderInnerList/:id',
+      name: 'orderInnerList',
+      component: orderInnerList
     },{
       path: '/orderList',
       name: 'orderList',

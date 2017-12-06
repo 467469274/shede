@@ -2,7 +2,12 @@
   <div class="showpqs">
 
     <p v-for="(list,index) in tableData">
-      <span v-for="(item,indexs) in list">{{item}}</span>
+      <span v-for="(item,indexs) in list">
+        <i v-if="typeof item == 'string'">{{item}}</i>
+        <i v-if="item<0" style="color:red;">{{item}}</i>
+        <i v-if="item>0" style="color:green;">{{item}}</i>
+        <i v-if="item==0" style="color:black;">{{item}}</i>
+      </span>
     </p>
   </div>
 </template>

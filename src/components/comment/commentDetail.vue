@@ -124,7 +124,6 @@
       let token = JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token;
       this.axios.get('http://shede.sinmore.vip/api/admin/goods/index?token='+token+'&page=1&pagesize=10000')
         .then(function (gods) {
-
           if(gods.data.error_code == 8){
             alert(gods.data.error_msg)
           }
@@ -175,10 +174,9 @@
       },
       save(){
         let _this = this;
-//
         let ars = [],
           picArs = _this.fileList2,
-          url = '/api/admin/comments/add',
+          url = '/api/admin/comments/add',i
           obj = {};
         for (let i = 0;i<picArs.length;i++){
           ars.push(picArs[i].name)

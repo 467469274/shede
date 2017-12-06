@@ -34,7 +34,7 @@
       <div class="header">
         <headerText></headerText>
         <div class="user">
-          欢迎您！{{myname}}<a>退出登录</a></div>
+          欢迎您！{{myname}}<a @click="checkOut">退出登录</a></div>
       </div>
       <div class="sidebar">
         <div class="logo">共好电商后台</div>
@@ -192,7 +192,7 @@
       let userCookie = getCookie('userCookie');
       if (userCookie != null && userCookie != "") {
         let user = JSON.parse(userCookie);
-        user = JSON.parse(user)
+//        user = JSON.parse(user)
         this.show = true;
         this.myname = user.name
       }
@@ -221,16 +221,48 @@
                 message: '' + data.error_msg + ''
               });
             } else {
-              console.log(data.data);
               setCookie('userCookie',JSON.stringify(data.data))
               _this.show = true;
             }
           })
         }
+      },clearCookie(){
+        let keys=document.cookie.match(/[^ =;]+(?=\=)/g);
+        if (keys) {
+          for (let i = keys.length; i--;)
+            document.cookie=keys[i]+'=0;expires=' + new Date( 0).toUTCString()
+        }
+      },
+      checkOut(){
+//        /api/adminOut
+        let _this = this;
+        _this.postFetch('/api/adminOut',{}, function (data) {
+          if (data.error_code != 0) {
+            _this.$message({
+              type: 'warning',
+              message: '' + data.error_msg + ''
+            });
+            _this.clearCookie();
+            location.reload();
+          } else {
+            _this.clearCookie();
+            location.reload();
+          }
+        })
       }
     },
     components: {
       headerText
+    },
+    mounted() {
+      let _this = this;
+      document.onkeydown = function (e) {
+        if (!_this.show){
+          if (e && e.keyCode == 13) {
+            _this.login()
+          }
+        }
+      }
     },
     computed: {
     }

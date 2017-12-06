@@ -9,7 +9,7 @@
       </el-form-item>
       <el-form-item label="活动性质">
         <el-checkbox-group v-model="type">
-          <el-checkbox :label=item.id name="type" v-for="(item,index) in checkArr"
+          <el-checkbox  :key="index":label=item.id name="type" v-for="(item,index) in checkArr"
                        style="display: inline-block;width:25%">
             {{item.privilege}}{{item.id}}
           </el-checkbox>

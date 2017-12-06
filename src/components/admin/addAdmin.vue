@@ -12,7 +12,7 @@
           <el-input v-model="mobile" style="width:30%"></el-input>
         </el-form-item>
         <el-form-item label="活动性质">
-          <el-radio class="radio" v-model="ateam" :label="item.id" v-for="(item,index) in adminGroupArr">{{item.name}}
+          <el-radio class="radio" :key="index" v-model="ateam" :label="item.id" v-for="(item,index) in adminGroupArr">{{item.name}}
           </el-radio>
         </el-form-item>
         <el-form-item label="登录用户名">

@@ -25,7 +25,6 @@
           v-model="yjtk"
           style="width: 450px"
         ></el-input>
-        <el-button type="primary">保存</el-button>
 
       </el-form-item>
       <el-form-item label="租金退款:" v-if="yType==9">
@@ -35,7 +34,6 @@
           v-model="zjtk"
           style="width: 450px"
         ></el-input>
-        <el-button type="primary">保存</el-button>
 
       </el-form-item>
       <el-form-item label="租金退款:" v-if="yType==11">{{zjtk}}
@@ -96,7 +94,7 @@
 
       </el-form-item>
       <el-form-item label="" v-for="(item ,index) in no_remark" :key="index">
-        <p>{{item.create_time}}{{item.get_name}}{{item.remark}}</p>
+        <p v-if="item.get_name">{{item.create_time}}&nbsp;&nbsp;&nbsp;{{item.get_name.name}}&nbsp;&nbsp;&nbsp;{{item.remark}}</p>
       </el-form-item>
       <el-form-item label="费用明细:">
         <p v-if="ist"> 租金：应付【￥
@@ -111,8 +109,7 @@
         </p>
         <p v-if="!ist"> 押金：应付【￥{{yajinyingfu}}】 / 实收￥{{yajinshishou}}</p>
 
-        <p> 退款￥{{tuikuan}}</p>
-
+        <p v-if="yType == 2"> 退款￥{{tuikuan}}</p>
         <p> 延期费用：￥{{yanqi}}</p>
 
         <p> 优惠券抵扣：-￥{{dikou}}</p>
@@ -143,7 +140,16 @@
                     v-if="yType==5 || yType==7 || yType==8|| yType==9 || yType==10 || yType==11 || yType==0">
         <p><span>发货日期:&nbsp;&nbsp;&nbsp;{{fhrq}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>收到日期:{{sdrq}}</span></p>
         <p><span>目标地址:&nbsp;&nbsp;&nbsp;{{shr}}&nbsp;&nbsp;&nbsp;{{mobile}}{{mbdz}}</span></p>
-        <p>发送网点:&nbsp;&nbsp;&nbsp;{{choseWd}}
+        <p>发送网点:&nbsp;&nbsp;&nbsp;
+
+          <el-select v-model="choseWd" disabled placeholder="请选择">
+            <el-option
+              v-for="item in wdops"
+              :key="item.id"
+              :label="item.name"
+              :value="item.id">
+            </el-option>
+          </el-select>
         </p>
         <p>
           物流单号:&nbsp;&nbsp;&nbsp;:{{wldh}}
@@ -171,7 +177,15 @@
       </el-form-item>
       <el-form-item label="用户返还:" class="formP" v-if="yType==8 || yType==9 || yType==10 || yType==11 || yType==0">
         <p><span>返还日期:&nbsp;&nbsp;&nbsp;{{farq}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>收回日期:{{shrq}}</span></p>
-        <p>发还网点:&nbsp;&nbsp;&nbsp; :{{choseWd2}}
+        <p>发还网点:&nbsp;&nbsp;&nbsp; :
+          <el-select v-model="choseWd2" disabled placeholder="请选择">
+            <el-option
+              v-for="item in wdops"
+              :key="item.id"
+              :label="item.name"
+              :value="item.id">
+            </el-option>
+          </el-select>
         </p>
         <p>
           物流单号:&nbsp;&nbsp;&nbsp;{{wldh2}}
@@ -190,7 +204,7 @@
           class="avatar-uploader"
           action="http://shede.sinmore.vip/api/storeImage"
           name="image"
-          :data="{model:9}"
+          :data="{model:'goods'}"
           :show-file-list="false"
           :on-success="handleAvatarSuccess">
           <img v-if="imageUrl" :src="showImg" class="avatar">
@@ -209,6 +223,7 @@
     data() {
       return {
         beizhu: '',  // 备注
+        wdops: [],
         ddbj: '123456789',
         userName: '用户名称',
         xdsj: '2017年10月27日22:20:59',
@@ -239,18 +254,16 @@
         mobile: '29884949498',//用户id
         get_remark: [],
         imageUrl: '',
-        no_remark: [],
-        imgUrl:''
+        no_remark: []
       }
     },
     created() {
       let _this = this;
       let user = _this.getCookie('userCookie');
       let token = JSON.parse(JSON.parse(user)).token;
-      console.log(token)
-      this.axios.get('http://shede.sinmore.vip/api/admin/website/index?token='+token+'&page=1&pagesize=10000')
+      this.axios.get('http://shede.sinmore.vip/api/admin/website/index?token=' + token + '&page=1&pagesize=10000')
         .then(function (response) {
-          if(response.data.error_code == 8){
+          if (response.data.error_code == 8) {
             alert(response.data.error_msg)
           }
           let data = response.data.data.websites;
@@ -260,24 +273,24 @@
           })
         })
         .catch(function (response) {
-          console.log(response);
         });
     },
     methods: {
       getData(obj) {
         let _this = this;
         _this.postFetch('/admin/order/detail', obj, function (data) {
+          console.log(data.data)
           _this.yType = data.data.type;
           _this.ddbj = data.data.order_sn;
           _this.mbdz = data.data.address;
-          _this.tuikuan = data.data.back_deposit;
+          _this.yjtk = data.data.back_deposit;
           _this.xdsj = data.data.create_time;
           if (data.data.get_user) {
             _this.userName = data.data.get_user.name;
           }
-          _this.choseWd2 = '' + data.data.back_network + '';
+          _this.choseWd2 = data.data.back_network;
           _this.wldh2 = data.data.back_odd_number;
-          _this.yjtk = data.data.back_rent;
+          _this.zjtk = data.data.back_rent;
           _this.shrq = data.data.back_time;
           _this.shr = data.data.consignee;
           _this.dikou = data.data.coupon;
@@ -297,7 +310,7 @@
           _this.get_remark = data.data.get_remark;
           _this.no_remark = data.data.no_remark;
           _this.kfry = data.data.waiter;
-          console.log(_this.get_remark)
+          _this.imageUrl = data.data.all_pic;
         })
       },
       textPop(n) {
@@ -314,53 +327,70 @@
         });
       },
       onSubmit() {
+        console.log(1)
         let _this = this;
         let obj = {
           order_id: _this.$route.params.id,
-          deposit: _this.zujinyingfu,
-          rent: _this.yajinyingfu,
-          back_deposit: _this.zujinyingfu - _this.zujinshishou - _this.dikou,
-          bakc_rent: _this.yajinyingfu - _this.yajinshishou - _this.dikou,
-          post_network: _this.choseWd,
-          post_odd_number: _this.wldh,
-          back_network: _this.choseWd2,
-          waiter: _this.kfry,
-          address: _this.mbdz,
-          consignee: _this.shr,
-          all_pic: '12i3y819823917231djdqiowjd.jpeg',
+        };
+        if (_this.yType == 4) {
+          obj.all_pic = _this.imageUrl
         }
-//
+        if (_this.yType <= 3 && _this.yType != 0) {
+          obj.deposit = _this.zujinyingfu;
+          obj.rent = _this.yajinyingfu
+        }
+        if (_this.yType < 4) {
+          obj.post_network = _this.choseWd
+          obj.post_odd_number = _this.wldh
+          obj.waiter = _this.kfry
+          obj.address = _this.mbdz
+          obj.consignee = _this.shr
+        }
+        if (_this.yType >= 5 && _this.yType <= 7) {
+          obj.back_network = _this.choseWd2
+        }
+        if (_this.yType == 9) {
+          obj.back_deposit = _this.zujinyingfu - _this.zujinshishou - _this.dikou
+          obj.bakc_rent = _this.yajinyingfu - _this.yajinshishou - _this.dikou
+        }
 
-
+        console.log(obj)
         _this.postFetch('/admin/order/update', obj, function (data) {
+          console.log(data);
           if (data.error_code === 1) {
             _this.$message({
               type: 'warning',
               message: '' + data.error_msg + ''
             });
           } else {
-            console.log(data)
+//            location.reload()
+//
+            _this.$router.push({path: '/orderList'});
+
           }
         }, function () {
         })
       },
-      handleAvatarSuccess() {
+      handleAvatarSuccess(re) {
+        this.imageUrl = re.data.filename
       },
       closeDD() {
         let _this = this;
+        let obj = {
+          order_id: _this.$route.params.id,
+          type: 1
+        };
+        if(_this.beizhu!=''){
+          obj.remark = _this.beizhu;
+        }
         this.$confirm('请您确认本次操作无误。')
           .then(_ => {
             let _this = this;
-            _this.postFetch('/admin/order/change', {
-              order_id: _this.$route.params.id,
-              type: 1,
-              remark: _this.beizhu
-            }, function (datas) {
-              console.log(datas)
+            _this.postFetch('/admin/order/change',obj, function (datas) {
               if (datas.error_code == 0) {
                 location.reload()
               } else {
-                _this.$message.error(''+datas.error_msg+'');
+                _this.$message.error('' + datas.error_msg + '');
               }
             })
           })
@@ -371,20 +401,23 @@
       },
       sure(data) {
         let _this = this;
-        if (data=='key' && this.imgUrl == '') {
+        let obj = {
+          order_id: _this.$route.params.id,
+          type: 0
+        };
+        if(_this.beizhu!=''){
+          obj.remark = _this.beizhu;
+        }
+        if (data == 'key' && this.imageUrl == '') {
           _this.$confirm('您还未录入“商品全家福”，您确认吗？')
             .then(() => {
               this.$confirm('请您确认本次操作无误。')
                 .then(_ => {
-                  _this.postFetch('/admin/order/change', {
-                    order_id: _this.$route.params.id,
-                    type: 0,
-                    remark: _this.beizhu
-                  }, function (datas) {
+                  _this.postFetch('/admin/order/change',obj, function (datas) {
                     if (datas.error_code == 0) {
                       location.reload()
                     } else {
-                      _this.$message.error(''+datas.error_msg+'');
+                      _this.$message.error('' + datas.error_msg + '');
                     }
                   })
                 })
@@ -394,20 +427,15 @@
             })
             .catch(() => {
             });
-        }else {
+        } else {
           this.$confirm('请您确认本次操作无误。')
             .then(_ => {
               let _this = this;
-              _this.postFetch('/admin/order/change', {
-                order_id: _this.$route.params.id,
-                type: 0,
-                remark: _this.beizhu
-              }, function (datas) {
-                console.log(datas);
+              _this.postFetch('/admin/order/change',obj, function (datas) {
                 if (datas.error_code == 0) {
                   location.reload()
                 } else {
-                  _this.$message.error(''+datas.error_msg+'');
+                  _this.$message.error('' + datas.error_msg + '');
                 }
               })
             })
@@ -421,7 +449,7 @@
     },
     computed: {
       showImg() {
-        return ''
+        return 'http://shede.sinmore.vip/storage/goods/' + this.imageUrl;
       },
       ist() {
         if (this.yType == 2) {
@@ -434,7 +462,6 @@
         switch (this.yType) {
           case 0:
             return '关闭订单';
-            break;
           case 1:
             return '待支付租金';
           case 2:
@@ -460,7 +487,7 @@
         }
       },
       url() {
-        return '/#/orderInnerList/' + this.ddbj
+        return '/#/orderInnerList/' + this.$route.params.id
       }
     }
   }

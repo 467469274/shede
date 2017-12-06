@@ -10,9 +10,9 @@
         <el-select v-model="wangdian" placeholder="请选择">
           <el-option
             v-for="item in cityOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
+            :key="item.id"
+            :label="item.name"
+            :value="item.id">
           </el-option>
         </el-select>
         <div style="display: inline-block;float: right;">
@@ -140,8 +140,8 @@
           <span v-if="scope.row.type==2">待确认</span>
           <span v-if="scope.row.type==4">待发货</span>
           <span v-if="scope.row.type==5">已发货</span>
-          <span v-if="scope.row.type==11">已发货</span>
-          <span v-if="scope.row.type==0">0关闭订单</span>
+          <span v-if="scope.row.type==11">已评价完成</span>
+          <span v-if="scope.row.type==0">关闭订单</span>
           <span v-if="scope.row.type==1">待支付租金</span>
           <span v-if="scope.row.type==3">待支付押金</span>
           <span v-if="scope.row.type==6">收货异常中</span>
@@ -201,7 +201,20 @@
       let obj = {
         p:this.p
       };
-      this.getData(obj)
+      this.getData(obj);
+      let _this = this;
+//
+
+      _this.axios.get('http://shede.sinmore.vip/api/admin/website/index?page=1&pagesize=1000&token='+JSON.parse(JSON.parse(_this.getCookie('userCookie'))).token)
+        .then(function (response) {
+          let data = response.data.data;
+          _this.cityOptions = data.websites;
+
+            if(response.data.error_code == 8) {
+              alert(response.data.error_msg);
+              return;
+            }
+        })
     },
     methods: {
       keyWordSearch(){
@@ -215,20 +228,16 @@
         let obj ={
           p:this.p
         };
-
-        if (this.checked!=''){
-          obj.type = this.checked;
-        }
-        if (this.wangdian !=''){
-          obj.post_network = this.wangdian
-        }
-        if (this.value6!='' && this.checked.length==0){
-          this.$message.error('请选择订单状态');
+        if (this.value6=='' || this.checked.length==0 || this.wangdian == ''){
+          this.$message.error('请认真选择搜索条件');
           return;
-        }else if (this.value6!='' && this.checked.length>0){
-          obj.begin_time = this.getDate(this.value6[0]);
-          obj.end_time = this.getDate(this.value6[1]);
+        }else{
+          obj.type = this.checked;
+          obj.post_network = this.wangdian;
+          obj.begin_time = this.getDate(this.value6[0]).replace('年','-').replace('月','-').replace('日','');
+          obj.end_time = this.getDate(this.value6[1]).replace('年','-').replace('月','-').replace('日','');
         }
+        console.log(obj)
         this.getData(obj)
       },
       bianji(s){
@@ -247,7 +256,6 @@
       getData(data){
         let _this = this;
         _this.postFetch('/admin/order/list',data,function(data){
-          console.log(data)
           _this.tableData = data.data.data;
           _this.total = data.data.total_p
         },function(){
